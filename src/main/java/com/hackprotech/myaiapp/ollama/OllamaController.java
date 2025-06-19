@@ -14,8 +14,9 @@ public class OllamaController {
     private OllamaChatModel ollamaChatModel;
 
     @GetMapping("/chat")
-    public String getChat(@RequestParam("message") String query) {
+    public String getChatMessage(@RequestParam("query") String query) {
         return ollamaChatModel.call(query);
     }
+
 
 }
